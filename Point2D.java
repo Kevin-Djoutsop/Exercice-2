@@ -2,19 +2,18 @@ public class Point2D {
     private double x;
     private double y;
 
-    // Constructeur
     public Point2D(double x, double y) {
         this.x = x;
         this.y = y;
     }
 
-    // Méthode pour déplacer le point
+    
     public void translate(double dx, double dy) {
         this.x += dx;
         this.y += dy;
     }
-
-    // Méthode pour faire une rotation autour de l'origine
+//
+    
     public void rotate(double angleRadians) {
         double newX = x * Math.cos(angleRadians) - y * Math.sin(angleRadians);
         double newY = x * Math.sin(angleRadians) + y * Math.cos(angleRadians);
@@ -22,12 +21,12 @@ public class Point2D {
         this.y = newY;
     }
 
-    // Affichage des coordonnées
+    
     public void print() {
         System.out.printf("Point(x = %.2f, y = %.2f)\n", x, y);
     }
 
-    // Main pour tester
+    
     public static void main(String[] args) {
         Point2D point = new Point2D(1, 0);
         System.out.println("Avant rotation :");
